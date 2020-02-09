@@ -1,0 +1,17 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Fastlane Action
+      uses: maierj/fastlane-action@v1.4.0
+      with:
+        lane: ui_tests
+      
+
