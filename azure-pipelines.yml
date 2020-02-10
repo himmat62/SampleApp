@@ -31,6 +31,6 @@ steps:
 - task: PublishTestResults@2
   displayName: 'Test Reports'
   inputs:
-    testResultsFiles: '**/report-*.xml'
+    testResultsFiles: 'fastlane/report*.xml'
     mergeTestResults: true
     failTaskOnFailedTests: true
