@@ -25,5 +25,12 @@ steps:
    gem install bundler
    bundler install
    fastlane list
-   fastlane ui_tests
-  displayName: 'Fastlane UI Tests'
+   fastlane tests
+  displayName: 'Fastlane Tests'
+
+- task: PublishTestResults@2
+  displayName: 'Test Reports'
+  inputs:
+    testResultsFiles: '**/report-*.xml'
+    mergeTestResults: true
+    failTaskOnFailedTests: true
